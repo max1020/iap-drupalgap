@@ -23,10 +23,11 @@ Provided you follow the steps below, with this basic setup you should be able to
 ```
 If you get an invalid product, this might help: http://troybrant.net/blog/2010/01/invalid-product-ids/ 
 
-You cannot order something without a sandbox user.
-You need a physical device to make a purchase.
-
 4. create a sandbox user (yes, you need to fill in a secret question)
+
+- You cannot order something without a sandbox user.
+- You need a physical device to make a purchase.
+- When you have mutliple user buying something with the same device, an alert popup asking other user to login is called. This seems to affect only sandbox user.
 
 
 <b>App Store, Drupal 7 and DrupalGap</b>
