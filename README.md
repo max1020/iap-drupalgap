@@ -47,7 +47,7 @@ drupalgap.settings.menus['user_menu_authenticated'] = {
       title: 'Get points',
       path: 'in-app',
       page_callback: 'drupalgap_get_form',
-      page_arguments: ['my_module_payment_form'],
+      page_arguments: ['iap_payment_form'],
       options: {
         attributes: {
           'data-icon': 'delete'
