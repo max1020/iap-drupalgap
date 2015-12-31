@@ -54,7 +54,23 @@ appname/www/app/modules/iap/iap.js
 Drupal.modules.custom['iap'] = {};
 ```
 
-4) Optional: Set a menu link on the home page or in the authenticated user menu (both in settings.js)
+4) Make sure your product name matches the variable (orderedProductID) that is passed via store.order(orderedProductID). 
+
+At this point the product IDs are hardcoded as radio button option values with a suffix added in the form_submit function. There certainly are better ways to dynamically populate the radio buttons.
+
+```
+function iap_payment_form_submit(form, form_state) {
+  try {
+    	var selectedProduct = form_state.values['points'];
+  		//console.log("selected Product " + selectedProduct);
+  		var orderedProductID = selectedProduct + "punkte";  	// you need to change this. Variable orderedProductID must match the productID of your product.
+  		store.order(orderedProductID);
+	}
+  catch (error) { console.log('iap_payment_form_submit - ' + error); }
+}
+````
+
+5) Optional: Set a menu link on the home page or in the authenticated user menu (both in settings.js)
 
   a) // App Front Page
 ```
