@@ -45,20 +45,20 @@ Generally, to enable in-app-purchasing you need to add this plugin when you inst
 
 When you have set up the basic app project locally (following the DrupalGap installation) this is what you need to do:
 
-1) Create a custom modules and iap folder in your app so that you have such a folder structure (after you have exported DrupalGap to your local app project):
+1) <b>Create a custom modules and iap folder and a ips.js file</b> in your app so that you have such a folder structure (after you have exported DrupalGap to your local app project):
 
 appname/www/app/modules/iap/iap.js
 
-2) Copy the content of iap.js from this repository in your iap.js file
+2) <b>Copy the content of iap.js</b> from this repository in your iap.js file
 
-3) enable the DrupalGap module in appname/www/app/settings.js like this:
+3) <b>enable the iap DrupalGap module</b> in appname/www/app/settings.js like this:
 
 ```
 /** Custom Modules - www/app/modules/custom **/
 Drupal.modules.custom['iap'] = {};
 ```
 
-4) Make sure your product name matches the variable (orderedProductID) that is passed via store.order(orderedProductID). 
+4) Make sure your <b>product ID matches the variable</b> (orderedProductID) that is passed via store.order(orderedProductID). 
 
 At this point the product IDs are hardcoded as radio button option values with a suffix added in the form_submit function. There certainly are better ways to dynamically populate the radio buttons.
 
@@ -74,7 +74,7 @@ function iap_payment_form_submit(form, form_state) {
 }
 ````
 
-5) Optional: Set a menu link on the home page or in the authenticated user menu (both in settings.js)
+5) Optional: <b>Set a menu link</b> on the home page or in the authenticated user menu (both in settings.js)
 
   a) // App Front Page
 ```
