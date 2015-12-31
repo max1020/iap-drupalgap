@@ -10,6 +10,8 @@ Experimental project to add In-app-purchasing to Drupalgap using Cordova and the
 
 Cordova IAP plugin: https://github.com/j3k0/cordova-plugin-purchase (install with cordova plugin add cc.fovea.cordova.purchase)
 
+A transaction node is created in Drupal when an IAP order is completed/finished. So you need to create a content type called "transactions" in Drupal with corresponding permissions. If you do not want this just uncomment or delete the createTransactionNode call.
+
 <b>Basics for using this IAP DrupalGap module:</b>
 
 Info: http://docs.drupalgap.org/7/Modules/Create_a_Custom_Module
