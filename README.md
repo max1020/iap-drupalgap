@@ -12,7 +12,7 @@ Those are just the most important steps to get IAP up and running in IOS.
 
 1. Create an App id in Apple Developer
 2. Create a provisioning profile (with the device you are testing it on, enable inAppPurchasing) for the app
-3. Create an app in iTunesConnect for the same app
+3. Create an app in iTunesConnect (using the same ID as in the Apple developer console)
 4. Create some CONSUMABLE products (only they are supported at this point)
 5. Submit all documents to Apple (legal, tax)
 
