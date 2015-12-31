@@ -103,13 +103,15 @@ drupalgap.settings.menus['user_menu_authenticated'] = {
     }
 ```
 
-<h3>Buying</h3>
+<h3>Make an IAP</h3>
 
 1. Log out from iTunes on your device (you do not need to log in as sandbox user there)
-2. open the app on your device click the "Get points" menu link
-3. at this point you should be prompted to login to your iTunes account 
-4. Enter the sandbox user credentials
-4. selec the product, click "Buy" and "confirm"
+2. open the app on your device
+3. log in with your Drupal account
+4. click the "Get points" menu link
+5. at this point you should be prompted to login to your iTunes account 
+6. Enter the sandbox user credentials
+7. select a product, click "Buy" and "confirm"
 
 If everything works, you just made a sandbox purchase with your mobile app and a Drupal transaction has been created.
 
