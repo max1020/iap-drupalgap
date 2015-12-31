@@ -23,15 +23,11 @@ Provided you follow the steps below, with this basic setup you should be able to
 ```
 If you get an invalid product, this might help: http://troybrant.net/blog/2010/01/invalid-product-ids/ 
 
-6. create a sandbox user (yes, you need to fill in a secret question)
+<b>NOTES:</b>
 
-- You cannot order something without a sandbox user.
+- In order to order/buy something you need to create a sandbox user (yes, you need to fill in a secret question)
 - You need a physical device to make a purchase.
-- When you have mutliple user buying something with the same device, an alert popup asking other user to login is called.
-
-<b>App Store, Drupal 7 and DrupalGap</b>
-
-Cordova IAP plugin: https://github.com/j3k0/cordova-plugin-purchase (install with cordova plugin add cc.fovea.cordova.purchase)
+- When you have mutliple user buying something with the same device, an alert popup asking other user to login is called. This seems to be only a sandbox issue.
 
 <b>B) Drupal 7</b>
 
@@ -41,9 +37,13 @@ A transaction node is created in Drupal when an IAP order is completed/finished.
 
 <b>C) DrupalGap</b>
 
-Much useful information regading DrupalGap is at http://docs.drupalgap.org/7/Introduction/index
-DrupalGap installation details: http://docs.drupalgap.org/7/Install)
-Info on custom DrupalGap modules: http://docs.drupalgap.org/7/Modules/Create_a_Custom_Module
+*) Much useful information regading DrupalGap is at http://docs.drupalgap.org/7/Introduction/index
+*) DrupalGap installation details: http://docs.drupalgap.org/7/Install)
+*) Info on custom DrupalGap modules: http://docs.drupalgap.org/7/Modules/Create_a_Custom_Module
+
+Generally, to enable in-app-purchasing you need to add this plugin when you install the DrupalGap SDK locally: https://github.com/j3k0/cordova-plugin-purchase (install with cordova plugin add cc.fovea.cordova.purchase)
+
+When you have set up the basic app project locally (following the DrupalGap installation) this is what you need to do:
 
 1) Create a custom modules and iap folder in your app so that you have such a folder structure (after you have exported DrupalGap to your local app project):
 
