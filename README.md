@@ -6,17 +6,42 @@ Experimental project to add In-app-purchasing to Drupalgap using Cordova and the
 
 <h3>Requirements</h3>
 
-<b>Drupal 7 and DrupalGap</b>
+<b>Apple</b>
+
+Those are just the most important steps to get IAP up and running in IOS.
+
+1. Create an App id in Apple Developer
+2. Create a provisioning profile (with the device you are testing it on, enable inAppPurchasing) for the app
+2. Create an app in iTunesConnect for the same app
+2. Create some CONSUMABLE products (only they are supported at this point)
+3. Submit all documents to Apple (legal, tax)
+
+Provided you follow the steps below, with this basic setup you should be able to connect to your iTunes store and pull your products from iTunesConnect. Check the console for something like 
+```
+{"id":"90punkte","alias":"90 Punkte","type":"consumable","state":"valid","title":"90 Punkte","description":"90 Pumnlte fasfasd","price":"$8.99","currency":"USD","loaded":true,"canPurchase":true,"owned":false,"downloading":false,"downloaded":false,"transaction":null,"valid":true}
+2015-12-31 11:15:51.910 appname[372:60b] \o/ STORE READY \o/
+```
+If you get an invalid product, this might help: http://troybrant.net/blog/2010/01/invalid-product-ids/ 
+
+You cannot order something without a sandbox user.
+You need a physical device to make a purchase.
+
+4. create a sandbox user (yes, you need to fill in a secret question)
+
+
+<b>App Store, Drupal 7 and DrupalGap</b>
 
 Cordova IAP plugin: https://github.com/j3k0/cordova-plugin-purchase (install with cordova plugin add cc.fovea.cordova.purchase)
 
+<b>Drupal 7</b>
+
 A transaction node is created in Drupal when an IAP order is completed/finished. So you need to create a content type called "transactions" in Drupal with corresponding permissions. If you do not want this just uncomment or delete the createTransactionNode call.
 
-<b>Basics for using this IAP DrupalGap module:</b>
+<b>DrupalGap</b>
 
-Info: http://docs.drupalgap.org/7/Modules/Create_a_Custom_Module
+Info on custom DrupalGap modules: http://docs.drupalgap.org/7/Modules/Create_a_Custom_Module
 
-1) Create a custom modules and iap folder in your app so that you have
+1) Create a custom modules and iap folder in your app so that you have such a folder structure (after you have exported DrupalGap to your local app project):
 
 appname/www/app/modules/iap/iap.js
 
