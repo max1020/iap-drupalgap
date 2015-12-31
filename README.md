@@ -2,7 +2,7 @@
 
 <h2>In app purchase module for Drupalgap</h2>
 
-Experimental project to add In-app-purchasing to Drupalgap using Cordova and the cordea iap plugin. Pull requests are welcome. Only consumable products are supported.
+Experimental project to add In-app-purchasing to Drupalgap using Cordova and the Fovea iap plugin. Pull requests are welcome. Only consumable products are supported.
 
 <h3>Requirements</h3>
 
