@@ -4,9 +4,9 @@
 
 Experimental project to add In-app-purchasing to Drupalgap using Cordova and the Fovea iap plugin. Pull requests are welcome. Only consumable products are supported.
 
-<h3>Requirements</h3>
+<h3>Basic Preparation</h3>
 
-<b>Apple</b>
+<b>A) Apple</b>
 
 Those are just the most important steps to get IAP up and running in IOS.
 
@@ -33,12 +33,16 @@ If you get an invalid product, this might help: http://troybrant.net/blog/2010/0
 
 Cordova IAP plugin: https://github.com/j3k0/cordova-plugin-purchase (install with cordova plugin add cc.fovea.cordova.purchase)
 
-<b>Drupal 7</b>
+<b>B) Drupal 7</b>
+
+Obviously, you need the DrupalGap module installed and enabled and have the application exported.
 
 A transaction node is created in Drupal when an IAP order is completed/finished. So you need to create a content type called "transactions" in Drupal with corresponding permissions. If you do not want this just uncomment or delete the createTransactionNode call.
 
-<b>DrupalGap</b>
+<b>C) DrupalGap</b>
 
+Much useful information regading DrupalGap is at http://docs.drupalgap.org/7/Introduction/index
+DrupalGap installation details: http://docs.drupalgap.org/7/Install)
 Info on custom DrupalGap modules: http://docs.drupalgap.org/7/Modules/Create_a_Custom_Module
 
 1) Create a custom modules and iap folder in your app so that you have such a folder structure (after you have exported DrupalGap to your local app project):
