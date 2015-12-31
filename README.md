@@ -123,7 +123,7 @@ and finally as I am not a developer and cannot focus much more on further develo
 
 <h3> WISHLIST:</h3>
 
-  *) add loading indicators after clicking the "buy" button (should disappear when the "Confirmation popup" shows up)
-  *) dynamic population of radio buttons (instead of hardcoding product IDs)
-  *) support for other IAP product types (e.g. NON_CONSUMABLE)
-  *) feedback on Android and Windows
+- add loading indicators after clicking the "buy" button (should disappear when the "Confirmation popup" shows up)
+- dynamic population of radio buttons (instead of hardcoding product IDs)
+- support for other IAP product types (e.g. NON_CONSUMABLE)
+- feedback on Android and Windows
