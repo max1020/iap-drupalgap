@@ -1,11 +1,13 @@
 /**
- * This is a custom DrupalGAp module that adds in app purchasing via (Apple, Google and Windows) to DrupalGap. Tested only on iPhone at this point.
- * It pulls the products from the store. 
- * User can select an amount (radio button widget). A Drupal transaction node is created when an item is successfully purchased (order is finished).
+ * This is a custom DrupalGap module that adds in-app-purchasing via (Apple, Google and Windows) to DrupalGap. 
+ * Tested only on iPhone at this point.
+ * The module pulls the products from the store. 
+ * User can select an amount (radio button widget) and buy the product. 
+ * A Drupal transaction node is created when an item is successfully purchased (order is finished).
  * 
  * WISHLIST:
  * 
- * 	*) add loading indicators after clicking the "buy" button (should disappear when the "Confirmation popup" shows up)
+ *  *) add loading indicators after clicking the "buy" button (should disappear when the "Confirmation popup" shows up)
  *  *) dynamic population of radio buttons (instead of hardcoding product IDs)
  *  *) support for other IAP product types (e.g. NON_CONSUMABLE)
  *  *) feedback on Android and Windows
