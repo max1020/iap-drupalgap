@@ -12,9 +12,9 @@ Those are just the most important steps to get IAP up and running in IOS.
 
 1. Create an App id in Apple Developer
 2. Create a provisioning profile (with the device you are testing it on, enable inAppPurchasing) for the app
-2. Create an app in iTunesConnect for the same app
-2. Create some CONSUMABLE products (only they are supported at this point)
-3. Submit all documents to Apple (legal, tax)
+3. Create an app in iTunesConnect for the same app
+4. Create some CONSUMABLE products (only they are supported at this point)
+5. Submit all documents to Apple (legal, tax)
 
 Provided you follow the steps below, with this basic setup you should be able to connect to your iTunes store and pull your products from iTunesConnect. Check the console for something like 
 ```
@@ -23,12 +23,11 @@ Provided you follow the steps below, with this basic setup you should be able to
 ```
 If you get an invalid product, this might help: http://troybrant.net/blog/2010/01/invalid-product-ids/ 
 
-4. create a sandbox user (yes, you need to fill in a secret question)
+6. create a sandbox user (yes, you need to fill in a secret question)
 
 - You cannot order something without a sandbox user.
 - You need a physical device to make a purchase.
-- When you have mutliple user buying something with the same device, an alert popup asking other user to login is called. This seems to affect only sandbox user.
-
+- When you have mutliple user buying something with the same device, an alert popup asking other user to login is called.
 
 <b>App Store, Drupal 7 and DrupalGap</b>
 
@@ -99,6 +98,16 @@ drupalgap.settings.menus['user_menu_authenticated'] = {
       }
     }
 ```
+
+<h3>Buying</h3>
+
+1. Log out from iTunes on your device (you do not need to log in as sandbox user there)
+2. open the app on your device click the "Get points" menu link
+3. at this point you should be prompted to login to your iTunes account 
+4. Enter the sandbox user credentials
+4. selec the product, click "Buy" and "confirm"
+
+If everything works, you just made a sandbox purchase with your mobile app and a Drupal transaction has been created.
 
 <h3>Resources:</h3>
 
