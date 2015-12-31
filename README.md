@@ -114,3 +114,12 @@ If everything works, you just made a sandbox purchase with your mobile app and a
 1. Simple example https://github.com/j3k0/cordova-plugin-purchase/blob/master/doc/minimal-example.js
 2. Full example: https://github.com/dpa99c/cordova-plugin-purchase-demo/blob/master/www/js/index.js
 3. Useful guide: https://software.intel.com/en-us/xdk/docs/html5-hybrid-apps-with-cordova-and-in-app-purchase
+
+and finally as I am not a developer and cannot focus much more on further development
+
+<h3> WISHLIST:</h3>
+
+  *) add loading indicators after clicking the "buy" button (should disappear when the "Confirmation popup" shows up)
+  *) dynamic population of radio buttons (instead of hardcoding product IDs)
+  *) support for other IAP product types (e.g. NON_CONSUMABLE)
+  *) feedback on Android and Windows
