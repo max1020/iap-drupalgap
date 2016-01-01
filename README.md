@@ -47,9 +47,9 @@ When you have set up the basic app project locally (following the DrupalGap inst
 
 1) <b>Create a custom modules and iap folder and a ips.js file</b> in your app so that you have such a folder structure (after you have exported DrupalGap to your local app project):
 
-appname/www/app/modules/iap/iap.js
+appname/www/app/modules/custom/iap/iap.js
 
-2) <b>Copy the content of iap.js</b> from this repository in your iap.js file
+2) <b>Copy the content of iap.js</b> from this repository in your local, empty iap.js file
 
 3) <b>enable the iap DrupalGap module</b> in appname/www/app/settings.js like this:
 
@@ -92,9 +92,7 @@ drupalgap.settings.menus['user_menu_authenticated'] = {
 .
 {
       title: 'Get points',
-      path: 'in-app',
-      page_callback: 'drupalgap_get_form',
-      page_arguments: ['iap_payment_form'],
+      path: 'appstore',
       options: {
         attributes: {
           'data-icon': 'delete'
