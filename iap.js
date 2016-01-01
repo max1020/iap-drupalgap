@@ -20,7 +20,7 @@
 function iap_menu() {
   try {
     var items = {};
-    items['in-app'] = {
+    items['appstore'] = {
       title: 'Buy points',
       page_callback: 'drupalgap_get_form',
       page_arguments: ['iap_payment_form'],
